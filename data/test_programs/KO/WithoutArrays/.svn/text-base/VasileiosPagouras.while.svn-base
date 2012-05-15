@@ -1,0 +1,13 @@
+program
+x:= 4;
+y:= 7;
+if (x>y)
+then
+    x:= x - y + k - l;
+    f:= 4;	
+else
+    y:=y - x ;
+    r:= r - z; 
+fi
+end
+

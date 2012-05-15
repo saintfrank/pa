@@ -1,0 +1,245 @@
+package blockRepresentation;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
+
+/**
+ * 
+ * @author Francesco
+ *
+ * @class The memory representation of a program block
+ */
+public abstract class IBlock {
+	
+	
+	
+	protected int m_label = 0;
+	protected ArrayList<IBlock> m_nexts;
+	protected ArrayList<IBlock> m_previouses;
+	
+	
+	
+	public IBlock() {
+		
+		// initializations
+		m_label = 0;
+		m_nexts = new ArrayList<IBlock>();
+		m_previouses = new ArrayList<IBlock>();
+		
+	}
+
+	/** Adds a previous block
+	 * 
+	 * @param b the block to add
+	 */
+	private void add_Previous( IBlock b) {
+		m_previouses.add(b);
+	}
+	
+	/** Adds the next block
+	 * 
+	 * @param b the block to add
+	 */
+	public void addNext( IBlock b) {
+		
+		System.out.println("I am "+ this.getLabel() + "\t " + this.toString() + " Assigning to me next " + b.getLabel() + "\t " + b.toString() );
+		m_nexts.add(b);
+		b.add_Previous(this);
+	}
+	
+	
+	/**********************************
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 					DEAR ANALYSTS PLEASE LOOK DOWN HERE
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
+	 * *********************************
+	 */
+	
+	/**
+	 * Print to output a textual representation of the inner structure
+	 * @returns A string  representation of the Block
+	 */
+	public abstract String toString();
+	
+	/** In case of control flow blocks this method returs a string representation of all the flow of their inner "stack" of blocks
+	 * 
+	 * @return
+	 */
+	public String toStringSubtree() {
+		return null;
+	}
+	
+	/**Getter for the label
+	 * @return
+	 */
+	public int getLabel() {
+		return m_label;
+	}
+
+	/**Setter for the label
+	 * @return
+	 */
+	public void setLabel(int label) {
+		this.m_label = label;
+	}	
+	
+	/** A getter for the blocks  occurrig right before
+	 * 
+	 * @return The set of direct previous Blocks
+	 */
+	public ArrayList<IBlock> getImmediateNexts() {
+		return m_nexts;
+	}
+	
+	/** Collects recursively the set of successor blocks till the end of the graph
+	 * 
+	 * @return The set of successors Blocks
+	 */
+	public Set<IBlock> getAllNextsEver() {
+		
+		Set<IBlock> s = new HashSet<IBlock>();
+		
+		// Base step
+		s.addAll(m_nexts);	
+		
+		// Recursive step
+		for(int i = 0 ; i < m_nexts.size(); i++)
+		{
+			s.addAll(m_nexts.get(i).getAllPreviousesEver());
+		}	
+		
+		return s ;
+	}
+	
+	/** A getter for the blocks occurring right before
+	 * 
+	 * @return The set of direct previous Blocks
+	 */
+	public ArrayList<IBlock> getImmediatePreviouses() {
+		return m_previouses;
+	}
+
+	/** Collects recursively the set of previous blocks till the end of the graph
+	 * 
+	 * @return The set of previous Blocks
+	 */
+	public Set<IBlock> getAllPreviousesEver() {
+		
+		Set<IBlock> s = new HashSet<IBlock>();
+		
+		// Base step
+		s.addAll(m_previouses);	
+		
+		// Recursive step
+		for(int i = 0 ; i < m_previouses.size(); i++)
+		{
+			s.addAll(m_previouses.get(i).getAllPreviousesEver());
+		}	
+		
+		return s ;
+	}
+	
+	/** Checks whether the block implements IControl , here the default answer "no", is defined. The sub classes answering "yes" will just override the method
+	 * 
+	 * @return true if it is, false otherwise
+	 */
+	public boolean isControlBlock(){
+		return false;
+	}
+	
+	
+	/** Checks whether the block is of class DeclarationBlock , here the default answer "no", is defined. The sub classes answering "yes" will just override the method
+	 * 
+	 * @return true if it is, false otherwise
+	 */
+	public boolean isDeclarationBlock(){
+		return false;
+	}
+	
+	
+	/** Checks whether the block is of class AssingmentBlock , here the default answer "no", is defined. The sub classes answering "yes" will just override the method
+	 * 
+	 * @return true if it is, false otherwise
+	 */
+	public boolean isAssignmentBlock(){
+		return false;
+	}
+	
+	
+	/** Checks whether the block is of class ExpressionSubBlock , here the default answer "no", is defined. The sub classes answering "yes" will just override the method
+	 * 
+	 * @return true if it is, false otherwise
+	 */
+	public boolean isExpressionSubBlock(){
+		return false;
+	}
+	
+	
+	/** Checks whether the block is of class GuardBlock , here the default answer "no", is defined. The sub classes answering "yes" will just override the method
+	 * 
+	 * @return true if it is, false otherwise
+	 */
+	public boolean isGuardBlock(){
+		return false;
+	}
+	
+	
+	/** Checks whether the block is of class SkipBlock , here the default answer "no", is defined. The sub classes answering "yes" will just override the method
+	 * 
+	 * @return true if it is, false otherwise
+	 */
+	public boolean isSkipBlock(){
+		return false;
+	}
+	
+	
+	/** Checks whether the block is of class WhileBlock , here the default answer "no", is defined. The sub classes answering "yes" will just override the method
+	 * 
+	 * @return true if it is, false otherwise
+	 */
+	public boolean isWhileBlock(){
+		return false;
+	}
+	
+	
+	/** Checks whether the block is of class IfBlock , here the default answer "no", is defined. The sub classes answering "yes" will just override the method
+	 * 
+	 * @return true if it is, false otherwise
+	 */
+	public boolean isIfBlock(){
+		return false;
+	}
+	
+	// added
+	
+	public String getLeftHand(){
+		return "";
+	}
+	
+	public String getRightHand(){
+		return "";
+	}
+	
+	public String operator(){
+		return "";
+	}
+}

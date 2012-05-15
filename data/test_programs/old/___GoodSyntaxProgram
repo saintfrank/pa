@@ -1,0 +1,22 @@
+program
+x := 1 ;
+y := 2 ;
+z := 5 ;
+while z < 10
+do
+if z>0
+then
+x := z*x ;
+y := y+x ;
+z := 4+t ;
+z := r-4;
+else
+x := x*2 ;
+y := y*z ;
+z := r-4;
+z := r-5;
+fi
+x := z+1 ;
+od
+y := z*z ;
+end

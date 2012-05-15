@@ -1,0 +1,11 @@
+program
+x:=5;
+y:=2;
+x:=3;
+while x>1
+do
+x:=x*x;
+y:=x-1;
+od
+skip;
+end
