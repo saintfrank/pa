@@ -1,0 +1,8 @@
+
+COMPILE: 
+
+> ant
+
+RUN:
+java -jar Analyzer.jar config.cfg data/test_program.while
+

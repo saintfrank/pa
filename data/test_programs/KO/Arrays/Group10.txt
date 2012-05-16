@@ -1,0 +1,1 @@
+program       int x[2]; int y;       x[0]:=3;       x[0]:=4;       x[1]:=0;       y:=x[1]+1+1;       while x[0]>=0 & y>=0       do             y:=x[0]*2-(2*y)/2-2;             x[0]:=x[0]-1;       od       if y>0 then            x[0]:=0;       else            x[0]:=1;       fi       x[0] :=4;end

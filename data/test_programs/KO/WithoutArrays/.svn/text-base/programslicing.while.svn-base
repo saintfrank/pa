@@ -1,0 +1,11 @@
+int x;
+int y;
+int z;
+x := 0;
+y := 0;
+while (y < 144)
+do
+	z := x + y;
+	x := y;
+	y := z;
+od

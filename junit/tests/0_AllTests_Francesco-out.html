@@ -1,0 +1,291 @@
+<html xmlns:lxslt="http://xml.apache.org/xslt" xmlns:stringutils="xalan://org.apache.tools.ant.util.StringUtils">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Standard Output from AllTests_Francesco</title>
+</head>
+<body>
+<pre>Tree: 
+   int
+      x
+      4
+   :=
+      x
+         y
+            4
+      z
+         4
+   :=
+      y
+         +
+            z
+               +
+                  3
+                  *
+                     4
+                     12
+            4
+      r
+         2345
+Finished : 
+
+
+The Program Blocks Representation
+
+ 
+(1) int x [4]
+(2) x [ y [ 4 ]  ]  := z [ 4 ] 
+(3) y [ z [ 3 + 4 * 12 ]  + 4 ]  := r [ 2345 ] 
+
+
+Forward edges Representation
+
+ 
+(1) int x [4]	--&gt;	(2)	x [ y [ 4 ]  ]  := z [ 4 ] 
+(2) x [ y [ 4 ]  ]  := z [ 4 ] 	--&gt;	(3)	y [ z [ 3 + 4 * 12 ]  + 4 ]  := r [ 2345 ] 
+(3) y [ z [ 3 + 4 * 12 ]  + 4 ]  := r [ 2345 ] 	--&gt;
+
+
+Backward edges nodes Representation
+
+ 
+(1) int x [4]	--&gt;
+(2) x [ y [ 4 ]  ]  := z [ 4 ] 	--&gt;	(1)	int x [4]
+(3) y [ z [ 3 + 4 * 12 ]  + 4 ]  := r [ 2345 ] 	--&gt;	(2)	x [ y [ 4 ]  ]  := z [ 4 ] 
+
+
+Present Arrays: [y [ z [ 3 + 4 * 12 ]  + 4 ]  := r [ 2345 ] , x [ y [ 4 ]  ]  := z [ 4 ] ]
+Present Arrays with variable x: [x [ y [ 4 ]  ]  := z [ 4 ] ]
+
+
+The Program Blocks Representation
+
+ 
+(1) int A [10]
+(2) x := 1
+(3) y := 2
+(4) z := 5
+(5) x := z * x
+(6) y := y + x
+(7) x :=  - x
+(8) y := y * z
+(9) A [ 4 ]  := x - 3 - 4 + 5 - 6
+(10) z := z - 1
+(11) z &gt; 0
+(12) z &lt; 10
+(13) x := z + 1
+(14) y := z * z
+
+
+Forward edges Representation
+
+ 
+(1) int A [10]	--&gt;	(2)	x := 1
+(2) x := 1	--&gt;	(3)	y := 2
+(3) y := 2	--&gt;	(4)	z := 5
+(4) z := 5	--&gt;	(12)	z &lt; 10
+(5) x := z * x	--&gt;	(6)	y := y + x
+(6) y := y + x	--&gt;	(12)	z &lt; 10
+(7) x :=  - x	--&gt;	(8)	y := y * z
+(8) y := y * z	--&gt;	(9)	A [ 4 ]  := x - 3 - 4 + 5 - 6
+(9) A [ 4 ]  := x - 3 - 4 + 5 - 6	--&gt;	(10)	z := z - 1
+(10) z := z - 1	--&gt;	(12)	z &lt; 10
+(11) z &gt; 0	--&gt;	(5)	x := z * x	(7)	x :=  - x
+(12) z &lt; 10	--&gt;	(11)	z &gt; 0	(13)	x := z + 1
+(13) x := z + 1	--&gt;	(14)	y := z * z
+(14) y := z * z	--&gt;
+
+
+Backward edges nodes Representation
+
+ 
+(1) int A [10]	--&gt;
+(2) x := 1	--&gt;	(1)	int A [10]
+(3) y := 2	--&gt;	(2)	x := 1
+(4) z := 5	--&gt;	(3)	y := 2
+(5) x := z * x	--&gt;	(11)	z &gt; 0
+(6) y := y + x	--&gt;	(5)	x := z * x	(11)	z &gt; 0
+(7) x :=  - x	--&gt;	(11)	z &gt; 0
+(8) y := y * z	--&gt;	(7)	x :=  - x	(11)	z &gt; 0
+(9) A [ 4 ]  := x - 3 - 4 + 5 - 6	--&gt;	(8)	y := y * z	(11)	z &gt; 0
+(10) z := z - 1	--&gt;	(9)	A [ 4 ]  := x - 3 - 4 + 5 - 6	(11)	z &gt; 0
+(11) z &gt; 0	--&gt;	(12)	z &lt; 10
+(12) z &lt; 10	--&gt;	(6)	y := y + x	(10)	z := z - 1	(4)	z := 5
+(13) x := z + 1	--&gt;	(12)	z &lt; 10
+(14) y := z * z	--&gt;	(13)	x := z + 1
+
+
+Previous x from 14 - Right : [x :=  - x, y := y + x, A [ 4 ]  := x - 3 - 4 + 5 - 6, x := z * x]
+Nexts x from 1 - Right : [y := y + x, x := z * x, A [ 4 ]  := x - 3 - 4 + 5 - 6, x :=  - x]
+Immediate previous from z &lt; 10 - : [y := y + x, z := z - 1, z := 5]
+Immediate previous from z &gt; 0 - : [x := z * x, x :=  - x]
+Immediate previous from if z &lt; 10 - : [y := y + x, z := z - 1, z := 5]
+Immediate nexts from z &gt; 0 - which is before if : [x := z * x, x :=  - x]
+Immediate previous from z &gt; 0, going to while - : [z &lt; 10]
+Immediate previous from x := z + 1, going to while - : [z &lt; 10]
+Number of blocks: 14
+Nexts from 1 - Left : [x := z * x, x := 1, x := z + 1, x :=  - x]
+Nexts from 1 - Right : [x := z * x, A [ 4 ]  := x - 3 - 4 + 5 - 6, y := y + x, x :=  - x]
+Previous from y := z * z - Left : [x := z * x, x := 1, x := z + 1, x :=  - x]
+Previous from y := z * z - Right : [x := z * x, A [ 4 ]  := x - 3 - 4 + 5 - 6, y := y + x, x :=  - x]
+Immediate previous from x :=  - x : [z &gt; 0]
+Immediate nexts from x :=  - x : [y := y * z]
+
+
+The Program Blocks Representation
+
+ 
+(1) int A [10]
+(2) x := 1
+(3) y := 2
+(4) z := 5
+(5) x := z * x
+(6) y := y + x
+(7) x :=  - x
+(8) y := y * z
+(9) A [ 4 ]  := x - 3 - 4 + 5 - 6
+(10) z := z - 1
+(11) z &gt; 0
+(12) z &lt; 10
+(13) x := z + 1
+(14) y := z * z
+
+
+Forward edges Representation
+
+ 
+(1) int A [10]	--&gt;	(2)	x := 1
+(2) x := 1	--&gt;	(3)	y := 2
+(3) y := 2	--&gt;	(4)	z := 5
+(4) z := 5	--&gt;	(12)	z &lt; 10
+(5) x := z * x	--&gt;	(6)	y := y + x
+(6) y := y + x	--&gt;	(12)	z &lt; 10
+(7) x :=  - x	--&gt;	(8)	y := y * z
+(8) y := y * z	--&gt;	(9)	A [ 4 ]  := x - 3 - 4 + 5 - 6
+(9) A [ 4 ]  := x - 3 - 4 + 5 - 6	--&gt;	(10)	z := z - 1
+(10) z := z - 1	--&gt;	(12)	z &lt; 10
+(11) z &gt; 0	--&gt;	(5)	x := z * x	(7)	x :=  - x
+(12) z &lt; 10	--&gt;	(11)	z &gt; 0	(13)	x := z + 1
+(13) x := z + 1	--&gt;	(14)	y := z * z
+(14) y := z * z	--&gt;
+
+
+Backward edges nodes Representation
+
+ 
+(1) int A [10]	--&gt;
+(2) x := 1	--&gt;	(1)	int A [10]
+(3) y := 2	--&gt;	(2)	x := 1
+(4) z := 5	--&gt;	(3)	y := 2
+(5) x := z * x	--&gt;	(11)	z &gt; 0
+(6) y := y + x	--&gt;	(5)	x := z * x	(11)	z &gt; 0
+(7) x :=  - x	--&gt;	(11)	z &gt; 0
+(8) y := y * z	--&gt;	(7)	x :=  - x	(11)	z &gt; 0
+(9) A [ 4 ]  := x - 3 - 4 + 5 - 6	--&gt;	(8)	y := y * z	(11)	z &gt; 0
+(10) z := z - 1	--&gt;	(9)	A [ 4 ]  := x - 3 - 4 + 5 - 6	(11)	z &gt; 0
+(11) z &gt; 0	--&gt;	(12)	z &lt; 10
+(12) z &lt; 10	--&gt;	(6)	y := y + x	(10)	z := z - 1	(4)	z := 5
+(13) x := z + 1	--&gt;	(12)	z &lt; 10
+(14) y := z * z	--&gt;	(13)	x := z + 1
+
+
+Checking the isIdentifier() on 9th block. 
+PASSED
+ 
+Checking isRecursiveExpression() on 9th block. 
+PASSED
+ 
+Checking isConstant() on y := 2 block. 
+PASSED
+ 
+Checking the toString() on 9th block. 
+PASSED
+Checking get_index() on 9th block. 
+PASSED
+ 
+Checking involvesArray() on A [ 4 ]  := x - 3 - 4 + 5 - 6 block. 
+PASSED
+ 
+Is there negative in x - 3 - 4 + 5 - 6 : returned true [expected true]
+The negaive elements in x - 3 - 4 + 5 - 6 : returned [3, 4 + 5, 6] [expected 3 elements]
+PASSED
+ 
+The negaive elements in x - 3 - 4 + 5 - 6 : returned [3, 4 + 5, 6] [expected 3 elements]
+PASSED
+ 
+The negative elements in x - 3 - 4 + 5 - 6 : returned falseandtrue [expected 3 elements]
+PASSED
+ 
+The negative elements in  - x : returned true [expected 3 elements]
+PASSED
+ 
+
+
+The Program Blocks Representation
+
+ 
+(1) int A [10]
+(2) x := 1
+(3) y := 2
+(4) z := 5
+(5) x := z * x
+(6) y := y + x
+(7) x :=  - x
+(8) y := y * z
+(9) A [ 4 ]  := x - 3 - 4 + 5 - 6
+(10) z := z - 1
+(11) z &gt; 0
+(12) z &lt; 10
+(13) x := z + 1
+(14) y := z * z
+
+
+Forward edges Representation
+
+ 
+(1) int A [10]	--&gt;	(2)	x := 1
+(2) x := 1	--&gt;	(3)	y := 2
+(3) y := 2	--&gt;	(4)	z := 5
+(4) z := 5	--&gt;	(12)	z &lt; 10
+(5) x := z * x	--&gt;	(6)	y := y + x
+(6) y := y + x	--&gt;	(12)	z &lt; 10
+(7) x :=  - x	--&gt;	(8)	y := y * z
+(8) y := y * z	--&gt;	(9)	A [ 4 ]  := x - 3 - 4 + 5 - 6
+(9) A [ 4 ]  := x - 3 - 4 + 5 - 6	--&gt;	(10)	z := z - 1
+(10) z := z - 1	--&gt;	(12)	z &lt; 10
+(11) z &gt; 0	--&gt;	(5)	x := z * x	(7)	x :=  - x
+(12) z &lt; 10	--&gt;	(11)	z &gt; 0	(13)	x := z + 1
+(13) x := z + 1	--&gt;	(14)	y := z * z
+(14) y := z * z	--&gt;
+
+
+Backward edges nodes Representation
+
+ 
+(1) int A [10]	--&gt;
+(2) x := 1	--&gt;	(1)	int A [10]
+(3) y := 2	--&gt;	(2)	x := 1
+(4) z := 5	--&gt;	(3)	y := 2
+(5) x := z * x	--&gt;	(11)	z &gt; 0
+(6) y := y + x	--&gt;	(5)	x := z * x	(11)	z &gt; 0
+(7) x :=  - x	--&gt;	(11)	z &gt; 0
+(8) y := y * z	--&gt;	(7)	x :=  - x	(11)	z &gt; 0
+(9) A [ 4 ]  := x - 3 - 4 + 5 - 6	--&gt;	(8)	y := y * z	(11)	z &gt; 0
+(10) z := z - 1	--&gt;	(9)	A [ 4 ]  := x - 3 - 4 + 5 - 6	(11)	z &gt; 0
+(11) z &gt; 0	--&gt;	(12)	z &lt; 10
+(12) z &lt; 10	--&gt;	(6)	y := y + x	(10)	z := z - 1	(4)	z := 5
+(13) x := z + 1	--&gt;	(12)	z &lt; 10
+(14) y := z * z	--&gt;	(13)	x := z + 1
+
+
+Checking the isDeclarationBlock() on block int A [10]
+PASSED
+ 
+Checking the isArray() on block int A [10] - Expected true, returned true
+PASSED
+ 
+Checking the getSize() on block int A [10] - Expected 10, returned 10
+PASSED
+ 
+</pre>
+</body>
+</html>

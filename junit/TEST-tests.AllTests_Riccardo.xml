@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="0" hostname="showandtell.home" name="tests.AllTests_Riccardo" tests="3" time="0.089" timestamp="2012-05-16T10:14:53">
+  <properties>
+    <property name="java.vendor" value="Apple Inc." />
+    <property name="sun.java.launcher" value="SUN_STANDARD" />
+    <property name="jikes.class.path" value=":/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/../Classes/alt-rt.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/../Classes/alt-string.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/../Classes/charsets.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/../Classes/classes.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/../Classes/dt.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/../Classes/jce.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/../Classes/jconsole.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/../Classes/jsse.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/../Classes/management-agent.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/../Classes/ui.jar" />
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers" />
+    <property name="ant.file.ProgramAnalysis" value="/Users/showandtell/Documents/Officina/ProgramAnalysis/build.xml" />
+    <property name="os.name" value="Mac OS X" />
+    <property name="sun.boot.class.path" value="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jsfd.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar:/System/Library/Frameworks/JavaVM.framework/Frameworks/JavaRuntimeSupport.framework/Resources/Java/JavaRuntimeSupport.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/ui.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/laf.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/sunrsasign.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jsse.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jce.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/charsets.jar" />
+    <property name="env.TMPDIR" value="/var/folders/2q/dqqtfztn1zq_x86v02fk34f40000gn/T/" />
+    <property name="env.Apple_Ubiquity_Message" value="/tmp/launch-YvYHtT/Apple_Ubiquity_Message" />
+    <property name="env.PWD" value="/Users/showandtell/Documents/Officina/ProgramAnalysis" />
+    <property name="java.vm.specification.vendor" value="Sun Microsystems Inc." />
+    <property name="ant.home" value="/usr/share/ant" />
+    <property name="java.runtime.version" value="1.6.0_31-b04-415-11M3635" />
+    <property name="env.Apple_PubSub_Socket_Render" value="/tmp/launch-jHjtvd/Render" />
+    <property name="env.DISPLAY" value="/tmp/launch-a0F1m3/org.x:0" />
+    <property name="user.name" value="showandtell" />
+    <property name="env.USER" value="showandtell" />
+    <property name="env.SHELL" value="/bin/bash" />
+    <property name="env.__CF_USER_TEXT_ENCODING" value="0x1F5:0:0" />
+    <property name="awt.nativeDoubleBuffering" value="true" />
+    <property name="env.PATH" value="/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/showandtell/scala/bin:/usr/X11/bin:/usr/local/git/bin:/usr/texbin" />
+    <property name="user.language" value="en" />
+    <property name="ant.file.type.ProgramAnalysis" value="file" />
+    <property name="sun.boot.library.path" value="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Libraries" />
+    <property name="env.JAVA_MAIN_CLASS_1030" value="org.apache.tools.ant.launch.Launcher" />
+    <property name="ant.project.default-target" value="build" />
+    <property name="ant.project.name" value="ProgramAnalysis" />
+    <property name="env.LC_CTYPE" value="UTF-8" />
+    <property name="java.version" value="1.6.0_31" />
+    <property name="user.timezone" value="" />
+    <property name="sun.arch.data.model" value="64" />
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16" />
+    <property name="java.endorsed.dirs" value="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/endorsed" />
+    <property name="sun.cpu.isalist" value="" />
+    <property name="sun.jnu.encoding" value="MacRoman" />
+    <property name="file.encoding.pkg" value="sun.io" />
+    <property name="env.SHLVL" value="1" />
+    <property name="file.separator" value="/" />
+    <property name="java.specification.name" value="Java Platform API Specification" />
+    <property name="java.class.version" value="50.0" />
+    <property name="user.country" value="US" />
+    <property name="java.home" value="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home" />
+    <property name="java.vm.info" value="mixed mode" />
+    <property name="env.LOGNAME" value="showandtell" />
+    <property name="ant.file" value="/Users/showandtell/Documents/Officina/ProgramAnalysis/build.xml" />
+    <property name="os.version" value="10.7.4" />
+    <property name="env.TERM_PROGRAM_VERSION" value="303.2" />
+    <property name="env.CLICOLOR" value="1" />
+    <property name="path.separator" value=":" />
+    <property name="java.vm.version" value="20.6-b01-415" />
+    <property name="ant.library.dir" value="/usr/share/ant/lib" />
+    <property name="junit.output.dir" value="junit" />
+    <property name="java.awt.printerjob" value="apple.awt.CPrinterJob" />
+    <property name="env.TERM" value="xterm-256color" />
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle" />
+    <property name="env.DYLD_LIBRARY_PATH" value="/Users/showandtell/boost_1_49_0/lib" />
+    <property name="awt.toolkit" value="apple.awt.CToolkit" />
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16" />
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16" />
+    <property name="env.LSCOLORS" value="ExFxCxDxBxegedabagacad" />
+    <property name="user.home" value="/Users/showandtell" />
+    <property name="target" value="1.6" />
+    <property name="java.specification.vendor" value="Sun Microsystems Inc." />
+    <property name="env.TERM_PROGRAM" value="Apple_Terminal" />
+    <property name="java.library.path" value="/Users/showandtell/boost_1_49_0/lib:.:/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java" />
+    <property name="java.vendor.url" value="http://www.apple.com/" />
+    <property name="java.vm.vendor" value="Apple Inc." />
+    <property name="gopherProxySet" value="false" />
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
+    <property name="ant.version" value="Apache Ant(TM) version 1.8.2 compiled on June 3 2011" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner tests.AllTests_Riccardo filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.OutErrSummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/showandtell/Documents/Officina/ProgramAnalysis/junit/TEST-tests.AllTests_Riccardo.xml crashfile=/Users/showandtell/Documents/Officina/ProgramAnalysis/junitvmwatcher7984715233912911695.properties propsfile=/Users/showandtell/Documents/Officina/ProgramAnalysis/junit4986030526334198921.properties" />
+    <property name="java.class.path" value="/Users/showandtell/Documents/Officina/ProgramAnalysis/bin:/Users/showandtell/Documents/Officina/ProgramAnalysis/lib/antlr-3.4-complete.jar:/Users/showandtell/Documents/Officina/ProgramAnalysis/lib/junit-4.10.jar:/usr/share/java/ant-1.8.2/lib/ant-launcher.jar:/usr/share/ant/lib/ant.jar:/usr/share/ant/lib/ant-junit.jar:/usr/share/ant/lib/ant-junit4.jar" />
+    <property name="env.TERM_SESSION_ID" value="B8DA9A7E-EE65-43A1-936C-3029358704D7" />
+    <property name="env.com.apple.java.jvmMode" value="client" />
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
+    <property name="ant.file.type" value="file" />
+    <property name="java.vm.specification.version" value="1.0" />
+    <property name="sun.cpu.endian" value="little" />
+    <property name="sun.os.patch.level" value="unknown" />
+    <property name="env.HOME" value="/Users/showandtell" />
+    <property name="debuglevel" value="source,lines,vars" />
+    <property name="java.io.tmpdir" value="/var/folders/2q/dqqtfztn1zq_x86v02fk34f40000gn/T/" />
+    <property name="java.vendor.url.bug" value="http://bugreport.apple.com/" />
+    <property name="env.SSH_AUTH_SOCK" value="/tmp/launch-IPZsWa/Listeners" />
+    <property name="env.COMMAND_MODE" value="unix2003" />
+    <property name="mrj.build" value="11M3635" />
+    <property name="java.awt.graphicsenv" value="apple.awt.CGraphicsEnvironment" />
+    <property name="os.arch" value="x86_64" />
+    <property name="java.ext.dirs" value="/Library/Java/Extensions:/System/Library/Java/Extensions:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/ext" />
+    <property name="env.com.apple.java.jvmTask" value="CommandLine_Manual.java" />
+    <property name="mrj.version" value="1070.1.6.0_31-415" />
+    <property name="user.dir" value="/Users/showandtell/Documents/Officina/ProgramAnalysis" />
+    <property name="line.separator" value="&#xa;" />
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM" />
+    <property name="basedir" value="/Users/showandtell/Documents/Officina/ProgramAnalysis" />
+    <property name="ant.java.version" value="1.6" />
+    <property name="ant.core.lib" value="/usr/share/ant/lib/ant.jar" />
+    <property name="source" value="1.6" />
+    <property name="file.encoding" value="MacRoman" />
+    <property name="java.specification.version" value="1.6" />
+    <property name="ant.project.invoked-targets" value="test" />
+  </properties>
+  <testcase classname="tests.RiccardoDetectionOfSigns" name="test_riccardo_1" time="0.038" />
+  <testcase classname="tests.RiccardoDetectionOfSigns" name="fake_2" time="0.0040" />
+  <testcase classname="tests.RiccardoDetectionOfSigns" name="fake_3" time="0.0040" />
+  <system-out><![CDATA[
+
+The Program Blocks Representation
+
+ 
+(1) int A [10]
+(2) x := 1
+(3) y := 2
+(4) z := 5
+(5) x := z * x
+(6) y := y + x
+(7) x :=  - x
+(8) y := y * z
+(9) A [ 4 ]  := x - 3 - 4 + 5 - 6
+(10) z := z - 1
+(11) z > 0
+(12) z < 10
+(13) x := z + 1
+(14) y := z * z
+
+
+Forward edges Representation
+
+ 
+(1) int A [10]	-->	(2)	x := 1
+(2) x := 1	-->	(3)	y := 2
+(3) y := 2	-->	(4)	z := 5
+(4) z := 5	-->	(12)	z < 10
+(5) x := z * x	-->	(6)	y := y + x
+(6) y := y + x	-->	(12)	z < 10
+(7) x :=  - x	-->	(8)	y := y * z
+(8) y := y * z	-->	(9)	A [ 4 ]  := x - 3 - 4 + 5 - 6
+(9) A [ 4 ]  := x - 3 - 4 + 5 - 6	-->	(10)	z := z - 1
+(10) z := z - 1	-->	(12)	z < 10
+(11) z > 0	-->	(5)	x := z * x	(7)	x :=  - x
+(12) z < 10	-->	(11)	z > 0	(13)	x := z + 1
+(13) x := z + 1	-->	(14)	y := z * z
+(14) y := z * z	-->
+
+
+Backward edges nodes Representation
+
+ 
+(1) int A [10]	-->
+(2) x := 1	-->	(1)	int A [10]
+(3) y := 2	-->	(2)	x := 1
+(4) z := 5	-->	(3)	y := 2
+(5) x := z * x	-->	(11)	z > 0
+(6) y := y + x	-->	(5)	x := z * x	(11)	z > 0
+(7) x :=  - x	-->	(11)	z > 0
+(8) y := y * z	-->	(7)	x :=  - x	(11)	z > 0
+(9) A [ 4 ]  := x - 3 - 4 + 5 - 6	-->	(8)	y := y * z	(11)	z > 0
+(10) z := z - 1	-->	(9)	A [ 4 ]  := x - 3 - 4 + 5 - 6	(11)	z > 0
+(11) z > 0	-->	(12)	z < 10
+(12) z < 10	-->	(6)	y := y + x	(10)	z := z - 1	(4)	z := 5
+(13) x := z + 1	-->	(12)	z < 10
+(14) y := z * z	-->	(13)	x := z + 1
+
+
+Previous x from 14 - Right : [x := z * x, y := y + x, A [ 4 ]  := x - 3 - 4 + 5 - 6, x :=  - x]
+
+
+The Program Blocks Representation
+
+ 
+(1) int A [10]
+(2) x := 1
+(3) y := 2
+(4) z := 5
+(5) x := z * x
+(6) y := y + x
+(7) x :=  - x
+(8) y := y * z
+(9) A [ 4 ]  := x - 3 - 4 + 5 - 6
+(10) z := z - 1
+(11) z > 0
+(12) z < 10
+(13) x := z + 1
+(14) y := z * z
+
+
+Forward edges Representation
+
+ 
+(1) int A [10]	-->	(2)	x := 1
+(2) x := 1	-->	(3)	y := 2
+(3) y := 2	-->	(4)	z := 5
+(4) z := 5	-->	(12)	z < 10
+(5) x := z * x	-->	(6)	y := y + x
+(6) y := y + x	-->	(12)	z < 10
+(7) x :=  - x	-->	(8)	y := y * z
+(8) y := y * z	-->	(9)	A [ 4 ]  := x - 3 - 4 + 5 - 6
+(9) A [ 4 ]  := x - 3 - 4 + 5 - 6	-->	(10)	z := z - 1
+(10) z := z - 1	-->	(12)	z < 10
+(11) z > 0	-->	(5)	x := z * x	(7)	x :=  - x
+(12) z < 10	-->	(11)	z > 0	(13)	x := z + 1
+(13) x := z + 1	-->	(14)	y := z * z
+(14) y := z * z	-->
+
+
+Backward edges nodes Representation
+
+ 
+(1) int A [10]	-->
+(2) x := 1	-->	(1)	int A [10]
+(3) y := 2	-->	(2)	x := 1
+(4) z := 5	-->	(3)	y := 2
+(5) x := z * x	-->	(11)	z > 0
+(6) y := y + x	-->	(5)	x := z * x	(11)	z > 0
+(7) x :=  - x	-->	(11)	z > 0
+(8) y := y * z	-->	(7)	x :=  - x	(11)	z > 0
+(9) A [ 4 ]  := x - 3 - 4 + 5 - 6	-->	(8)	y := y * z	(11)	z > 0
+(10) z := z - 1	-->	(9)	A [ 4 ]  := x - 3 - 4 + 5 - 6	(11)	z > 0
+(11) z > 0	-->	(12)	z < 10
+(12) z < 10	-->	(6)	y := y + x	(10)	z := z - 1	(4)	z := 5
+(13) x := z + 1	-->	(12)	z < 10
+(14) y := z * z	-->	(13)	x := z + 1
+
+
+Previous x from 14 - Right : [x := z * x, y := y + x, x :=  - x, A [ 4 ]  := x - 3 - 4 + 5 - 6]
+
+
+The Program Blocks Representation
+
+ 
+(1) int A [10]
+(2) x := 1
+(3) y := 2
+(4) z := 5
+(5) x := z * x
+(6) y := y + x
+(7) x :=  - x
+(8) y := y * z
+(9) A [ 4 ]  := x - 3 - 4 + 5 - 6
+(10) z := z - 1
+(11) z > 0
+(12) z < 10
+(13) x := z + 1
+(14) y := z * z
+
+
+Forward edges Representation
+
+ 
+(1) int A [10]	-->	(2)	x := 1
+(2) x := 1	-->	(3)	y := 2
+(3) y := 2	-->	(4)	z := 5
+(4) z := 5	-->	(12)	z < 10
+(5) x := z * x	-->	(6)	y := y + x
+(6) y := y + x	-->	(12)	z < 10
+(7) x :=  - x	-->	(8)	y := y * z
+(8) y := y * z	-->	(9)	A [ 4 ]  := x - 3 - 4 + 5 - 6
+(9) A [ 4 ]  := x - 3 - 4 + 5 - 6	-->	(10)	z := z - 1
+(10) z := z - 1	-->	(12)	z < 10
+(11) z > 0	-->	(5)	x := z * x	(7)	x :=  - x
+(12) z < 10	-->	(11)	z > 0	(13)	x := z + 1
+(13) x := z + 1	-->	(14)	y := z * z
+(14) y := z * z	-->
+
+
+Backward edges nodes Representation
+
+ 
+(1) int A [10]	-->
+(2) x := 1	-->	(1)	int A [10]
+(3) y := 2	-->	(2)	x := 1
+(4) z := 5	-->	(3)	y := 2
+(5) x := z * x	-->	(11)	z > 0
+(6) y := y + x	-->	(5)	x := z * x	(11)	z > 0
+(7) x :=  - x	-->	(11)	z > 0
+(8) y := y * z	-->	(7)	x :=  - x	(11)	z > 0
+(9) A [ 4 ]  := x - 3 - 4 + 5 - 6	-->	(8)	y := y * z	(11)	z > 0
+(10) z := z - 1	-->	(9)	A [ 4 ]  := x - 3 - 4 + 5 - 6	(11)	z > 0
+(11) z > 0	-->	(12)	z < 10
+(12) z < 10	-->	(6)	y := y + x	(10)	z := z - 1	(4)	z := 5
+(13) x := z + 1	-->	(12)	z < 10
+(14) y := z * z	-->	(13)	x := z + 1
+
+
+Previous x from 14 - Right : [x :=  - x, x := z * x, y := y + x, A [ 4 ]  := x - 3 - 4 + 5 - 6]
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

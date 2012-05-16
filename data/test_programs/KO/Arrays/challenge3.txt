@@ -1,0 +1,22 @@
+program
+int i;
+int A[100];
+int x;
+i:=1;
+read x;
+if x >= 200 then
+	x := 199;
+else
+	skip;
+fi
+while i>0 & i<x do
+	if i > 99 then
+		x := x-1;
+		A[x-i] := x;
+	else
+		A[i] := x-i;
+	fi
+	i := i+1;
+od
+write A[i];
+end

@@ -1,0 +1,16 @@
+program
+
+x:=2; 
+y:=4; 
+x:=1; 
+
+if y > x
+then  
+z:=y; 
+
+else 
+z:=y*y; 
+fi
+
+x:=z;
+end

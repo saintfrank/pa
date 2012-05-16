@@ -1,0 +1,19 @@
+program
+int x;
+int y;
+int z;
+int w;
+int i;
+int A[1];
+x = 4;
+y = x;
+z = y;
+z = z + 4;
+while (i < 2) do
+	if (x < 4 & 2 < 3) then
+		w = A[z];
+	else
+		skip;
+	fi
+od
+end

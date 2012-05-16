@@ -1,0 +1,8 @@
+program
+x:=0;
+while x < 99 do
+  x:=x+1;
+od
+if(x = 100)
+  write 100;
+end

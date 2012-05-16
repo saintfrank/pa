@@ -1,0 +1,43 @@
+program
+int start; 
+int array_end;
+int an_array[3];
+int counter;
+array_end:=2;
+while array_end>=0 do
+	while start<3 do
+		if start<3 then
+			start := start + 1;
+		else
+			write start;
+		fi
+		if array_end>=0 then
+			array_end := array_end - 1;
+		else
+			write array_end;
+		fi
+		an_array[start] := array_end;
+		an_array[array_end] := start;
+	od
+od
+while counter<3 do
+	write an_array[counter];
+	counter := counter + 1;
+	if 3<4 then
+		if 3<4 then
+			write 3;
+		else
+			write 4;
+		fi
+	else
+		if 3<4 then
+			write 3;
+		else
+			write 4;
+		fi
+	fi
+od	
+end
+
+
+

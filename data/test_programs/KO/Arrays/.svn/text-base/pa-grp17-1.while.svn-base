@@ -1,0 +1,28 @@
+program
+
+int x;
+int y;
+int z;
+int A[10];
+int B[10];
+
+x:=0;
+y:=9;
+z:=0;
+while x<20 do
+	if z<1 then
+		A[y]:=x;
+		z:=1;
+	else
+		B[y]:=x;
+		y:=y-1;
+		z:=0;
+	fi
+	x:= x + 1;
+od
+x:=0;
+while x<10 do
+	write A[x];
+	write B[x];
+od
+end

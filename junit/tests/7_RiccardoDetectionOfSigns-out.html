@@ -1,0 +1,189 @@
+<html xmlns:lxslt="http://xml.apache.org/xslt" xmlns:stringutils="xalan://org.apache.tools.ant.util.StringUtils">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Standard Output from RiccardoDetectionOfSigns</title>
+</head>
+<body>
+<pre>
+
+The Program Blocks Representation
+
+ 
+(1) int A [10]
+(2) x := 1
+(3) y := 2
+(4) z := 5
+(5) x := z * x
+(6) y := y + x
+(7) x :=  - x
+(8) y := y * z
+(9) A [ 4 ]  := x - 3 - 4 + 5 - 6
+(10) z := z - 1
+(11) z &gt; 0
+(12) z &lt; 10
+(13) x := z + 1
+(14) y := z * z
+
+
+Forward edges Representation
+
+ 
+(1) int A [10]	--&gt;	(2)	x := 1
+(2) x := 1	--&gt;	(3)	y := 2
+(3) y := 2	--&gt;	(4)	z := 5
+(4) z := 5	--&gt;	(12)	z &lt; 10
+(5) x := z * x	--&gt;	(6)	y := y + x
+(6) y := y + x	--&gt;	(12)	z &lt; 10
+(7) x :=  - x	--&gt;	(8)	y := y * z
+(8) y := y * z	--&gt;	(9)	A [ 4 ]  := x - 3 - 4 + 5 - 6
+(9) A [ 4 ]  := x - 3 - 4 + 5 - 6	--&gt;	(10)	z := z - 1
+(10) z := z - 1	--&gt;	(12)	z &lt; 10
+(11) z &gt; 0	--&gt;	(5)	x := z * x	(7)	x :=  - x
+(12) z &lt; 10	--&gt;	(11)	z &gt; 0	(13)	x := z + 1
+(13) x := z + 1	--&gt;	(14)	y := z * z
+(14) y := z * z	--&gt;
+
+
+Backward edges nodes Representation
+
+ 
+(1) int A [10]	--&gt;
+(2) x := 1	--&gt;	(1)	int A [10]
+(3) y := 2	--&gt;	(2)	x := 1
+(4) z := 5	--&gt;	(3)	y := 2
+(5) x := z * x	--&gt;	(11)	z &gt; 0
+(6) y := y + x	--&gt;	(5)	x := z * x	(11)	z &gt; 0
+(7) x :=  - x	--&gt;	(11)	z &gt; 0
+(8) y := y * z	--&gt;	(7)	x :=  - x	(11)	z &gt; 0
+(9) A [ 4 ]  := x - 3 - 4 + 5 - 6	--&gt;	(8)	y := y * z	(11)	z &gt; 0
+(10) z := z - 1	--&gt;	(9)	A [ 4 ]  := x - 3 - 4 + 5 - 6	(11)	z &gt; 0
+(11) z &gt; 0	--&gt;	(12)	z &lt; 10
+(12) z &lt; 10	--&gt;	(6)	y := y + x	(10)	z := z - 1	(4)	z := 5
+(13) x := z + 1	--&gt;	(12)	z &lt; 10
+(14) y := z * z	--&gt;	(13)	x := z + 1
+
+
+Previous x from 14 - Right : [x :=  - x, A [ 4 ]  := x - 3 - 4 + 5 - 6, y := y + x, x := z * x]
+
+
+The Program Blocks Representation
+
+ 
+(1) int A [10]
+(2) x := 1
+(3) y := 2
+(4) z := 5
+(5) x := z * x
+(6) y := y + x
+(7) x :=  - x
+(8) y := y * z
+(9) A [ 4 ]  := x - 3 - 4 + 5 - 6
+(10) z := z - 1
+(11) z &gt; 0
+(12) z &lt; 10
+(13) x := z + 1
+(14) y := z * z
+
+
+Forward edges Representation
+
+ 
+(1) int A [10]	--&gt;	(2)	x := 1
+(2) x := 1	--&gt;	(3)	y := 2
+(3) y := 2	--&gt;	(4)	z := 5
+(4) z := 5	--&gt;	(12)	z &lt; 10
+(5) x := z * x	--&gt;	(6)	y := y + x
+(6) y := y + x	--&gt;	(12)	z &lt; 10
+(7) x :=  - x	--&gt;	(8)	y := y * z
+(8) y := y * z	--&gt;	(9)	A [ 4 ]  := x - 3 - 4 + 5 - 6
+(9) A [ 4 ]  := x - 3 - 4 + 5 - 6	--&gt;	(10)	z := z - 1
+(10) z := z - 1	--&gt;	(12)	z &lt; 10
+(11) z &gt; 0	--&gt;	(5)	x := z * x	(7)	x :=  - x
+(12) z &lt; 10	--&gt;	(11)	z &gt; 0	(13)	x := z + 1
+(13) x := z + 1	--&gt;	(14)	y := z * z
+(14) y := z * z	--&gt;
+
+
+Backward edges nodes Representation
+
+ 
+(1) int A [10]	--&gt;
+(2) x := 1	--&gt;	(1)	int A [10]
+(3) y := 2	--&gt;	(2)	x := 1
+(4) z := 5	--&gt;	(3)	y := 2
+(5) x := z * x	--&gt;	(11)	z &gt; 0
+(6) y := y + x	--&gt;	(5)	x := z * x	(11)	z &gt; 0
+(7) x :=  - x	--&gt;	(11)	z &gt; 0
+(8) y := y * z	--&gt;	(7)	x :=  - x	(11)	z &gt; 0
+(9) A [ 4 ]  := x - 3 - 4 + 5 - 6	--&gt;	(8)	y := y * z	(11)	z &gt; 0
+(10) z := z - 1	--&gt;	(9)	A [ 4 ]  := x - 3 - 4 + 5 - 6	(11)	z &gt; 0
+(11) z &gt; 0	--&gt;	(12)	z &lt; 10
+(12) z &lt; 10	--&gt;	(6)	y := y + x	(10)	z := z - 1	(4)	z := 5
+(13) x := z + 1	--&gt;	(12)	z &lt; 10
+(14) y := z * z	--&gt;	(13)	x := z + 1
+
+
+Previous x from 14 - Right : [y := y + x, A [ 4 ]  := x - 3 - 4 + 5 - 6, x :=  - x, x := z * x]
+
+
+The Program Blocks Representation
+
+ 
+(1) int A [10]
+(2) x := 1
+(3) y := 2
+(4) z := 5
+(5) x := z * x
+(6) y := y + x
+(7) x :=  - x
+(8) y := y * z
+(9) A [ 4 ]  := x - 3 - 4 + 5 - 6
+(10) z := z - 1
+(11) z &gt; 0
+(12) z &lt; 10
+(13) x := z + 1
+(14) y := z * z
+
+
+Forward edges Representation
+
+ 
+(1) int A [10]	--&gt;	(2)	x := 1
+(2) x := 1	--&gt;	(3)	y := 2
+(3) y := 2	--&gt;	(4)	z := 5
+(4) z := 5	--&gt;	(12)	z &lt; 10
+(5) x := z * x	--&gt;	(6)	y := y + x
+(6) y := y + x	--&gt;	(12)	z &lt; 10
+(7) x :=  - x	--&gt;	(8)	y := y * z
+(8) y := y * z	--&gt;	(9)	A [ 4 ]  := x - 3 - 4 + 5 - 6
+(9) A [ 4 ]  := x - 3 - 4 + 5 - 6	--&gt;	(10)	z := z - 1
+(10) z := z - 1	--&gt;	(12)	z &lt; 10
+(11) z &gt; 0	--&gt;	(5)	x := z * x	(7)	x :=  - x
+(12) z &lt; 10	--&gt;	(11)	z &gt; 0	(13)	x := z + 1
+(13) x := z + 1	--&gt;	(14)	y := z * z
+(14) y := z * z	--&gt;
+
+
+Backward edges nodes Representation
+
+ 
+(1) int A [10]	--&gt;
+(2) x := 1	--&gt;	(1)	int A [10]
+(3) y := 2	--&gt;	(2)	x := 1
+(4) z := 5	--&gt;	(3)	y := 2
+(5) x := z * x	--&gt;	(11)	z &gt; 0
+(6) y := y + x	--&gt;	(5)	x := z * x	(11)	z &gt; 0
+(7) x :=  - x	--&gt;	(11)	z &gt; 0
+(8) y := y * z	--&gt;	(7)	x :=  - x	(11)	z &gt; 0
+(9) A [ 4 ]  := x - 3 - 4 + 5 - 6	--&gt;	(8)	y := y * z	(11)	z &gt; 0
+(10) z := z - 1	--&gt;	(9)	A [ 4 ]  := x - 3 - 4 + 5 - 6	(11)	z &gt; 0
+(11) z &gt; 0	--&gt;	(12)	z &lt; 10
+(12) z &lt; 10	--&gt;	(6)	y := y + x	(10)	z := z - 1	(4)	z := 5
+(13) x := z + 1	--&gt;	(12)	z &lt; 10
+(14) y := z * z	--&gt;	(13)	x := z + 1
+
+
+Previous x from 14 - Right : [A [ 4 ]  := x - 3 - 4 + 5 - 6, y := y + x, x :=  - x, x := z * x]
+</pre>
+</body>
+</html>
