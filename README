@@ -1,7 +1,18 @@
+Static Analyzer for the While Language
 
 COMPILE: 
 
-> ant
+> ant all
+
+TEST:
+
+> ant test
+
+CLEAN:
+
+> ant cleanall
+
+
 
 RUN:
 java -jar Analyzer.jar config.cfg data/test_program.while
