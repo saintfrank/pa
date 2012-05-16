@@ -15,5 +15,6 @@ CLEAN:
 
 
 RUN:
-java -jar Analyzer.jar config.cfg data/test_program.while
+
+> java -jar Analyzer.jar config.cfg data/test_program.while
 
