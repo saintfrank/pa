@@ -1,8 +1,0 @@
-program
-int x;
-int A[5];
-while x < 5 do
-  write A[x];
-  x:=x+1;
-od
-end

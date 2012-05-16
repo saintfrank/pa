@@ -1,8 +1,0 @@
-program 
-int a;
-int b;
-int A[1];
-a := -1;
-b := -a;
-write A[b];
-end
